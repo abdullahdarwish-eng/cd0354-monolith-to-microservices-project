@@ -15,9 +15,10 @@ spec:
         service: reverseproxy
     spec:
       containers:
-        - image: abdullahfdarwish/udagram-reverseproxy:v1
-          name: reverseproxy
+        - name: reverseproxy
+          image: abdullahfdarwish/udagram-reverseproxy:v1
           imagePullPolicy: Always
           ports:
-            - containerPort: 8080
+          - containerPort: 80
+            protocol: TCP
       restartPolicy: Always
